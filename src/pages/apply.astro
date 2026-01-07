@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Apply Now">
+    <section class="page-header">
+        <div class="container">
+            <h1>Application Form</h1>
+            <p class="lead">Deadline: <span class="text-orange">18th December</span></p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <form class="application-form" action="https://formspree.io/f/xqearday" method="POST">
+                
+                <!-- SECTION 1 -->
+                <fieldset>
+                    <legend>01 // Basic Info</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" required placeholder="Jane Doe" />
+                        </div>
+                        <div class="form-group">
+                            <label>Age (18-35)</label>
+                            <input type="number" name="age" min="18" max="35" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select name="gender">
+                                <option>Female</option>
+                                <option>Male</option>
+                                <option>Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Province / Town</label>
+                            <input type="text" name="location" required />
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp Number</label>
+                            <input type="tel" name="whatsapp" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" required />
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Are you a Zambian Citizen?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="citizen" value="yes" required> Yes</label>
+                                <label><input type="radio" name="citizen" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 2 -->
+                <fieldset>
+                    <legend>02 // The Journey</legend>
+                    <div class="form-group">
+                        <label>What is your motivation for change?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Why this Academy specifically?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>What are your core personal values?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 3 -->
+                <fieldset>
+                    <legend>03 // Impact</legend>
+                    <div class="form-group">
+                        <label>Which social challenge concerns you most?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Have you taken action before?</label>
+                        <select name="action_taken">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Describe that action and what you learned.</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 4 -->
+                <fieldset>
+                    <legend>04 // Dialogue</legend>
+                    <div class="form-group">
+                        <label>How do you handle disagreement?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Comfort facilitating sensitive topics (1-5)</label>
+                        <input type="range" min="1" max="5" step="1" />
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; opacity: 0.7;">
+                            <span>Uncomfortable</span>
+                            <span>Very Comfortable</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>What does 'building bridges' mean to you?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 5 -->
+                <fieldset>
+                    <legend>05 // Growth</legend>
+                    <div class="form-group">
+                        <label>What is your greatest strength?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>What is a personal limitation you are working on?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>How do you usually respond to feedback?</label>
+                        <select>
+                            <option>I listen and reflect</option>
+                            <option>I get defensive but process it later</option>
+                            <option>I struggle to accept it</option>
+                            <option>I actively seek it out</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 6 -->
+                <fieldset>
+                    <legend>06 // Project</legend>
+                    <div class="form-group">
+                        <label>Do you have a specific project idea?</label>
+                        <select name="has_project">
+                            <option>Yes</option>
+                            <option>No, but I want to find one</option>
+                            <option>Not yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Describe your idea (if any).</label>
+                        <textarea rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>What does success look like in 90 days?</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 7 -->
+                <fieldset>
+                    <legend>07 // Commitment</legend>
+                    <div class="form-group">
+                        <label>Are you ready for the full commitment?</label>
+                        <select>
+                            <option>Yes, absolutely</option>
+                            <option>No</option>
+                            <option>I need to plan for it</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hours available per week?</label>
+                        <select>
+                            <option>3-5 hours</option>
+                            <option>6-8 hours</option>
+                            <option>9+ hours</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Do you have reliable internet access?</label>
+                        <select>
+                            <option>Yes</option>
+                            <option>Sometimes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 8 -->
+                <fieldset>
+                    <legend>08 // Final Pitch</legend>
+                    <div class="form-group">
+                        <label>Why should we invest in YOU?</label>
+                        <textarea rows="4" required placeholder="Sell yourself. Be bold."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Any final notes? (Optional)</label>
+                        <textarea rows="2"></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 9 -->
+                <fieldset class="declaration">
+                    <legend>09 // Declaration</legend>
+                    <label class="checkbox-label">
+                        <input type="checkbox" required />
+                        I declare that the information provided is true and I am ready to challenge myself.
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary submit-btn">Submit Application</button>
+
+            </form>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        padding: 8rem 0 4rem;
+        background-color: #081020;
+        border-bottom: 1px solid var(--color-blueprint-line);
+        background-image: url('/images/blueprint-bg.png');
+    }
+
+    /* Form Styles */
+    .application-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    fieldset {
+        border: 2px solid var(--color-blueprint-line);
+        padding: 2rem;
+        margin-bottom: 3rem;
+        background: rgba(255,255,255,0.02);
+    }
+    
+    legend {
+        font-family: var(--font-headline);
+        font-size: 2rem;
+        color: var(--color-sun-yellow);
+        padding: 0 1rem;
+    }
+    
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .full-width { grid-column: 1 / -1; }
+    
+    .form-group { margin-bottom: 1.5rem; }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #ccd;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 1rem;
+        background: #050a14;
+        border: 1px solid #334;
+        color: var(--color-white);
+        font-family: var(--font-body);
+        font-size: 1rem;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+        border-color: var(--color-neon-orange);
+        outline: none;
+    }
+    
+    .radio-group {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+    }
+    
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .form-grid { grid-template-columns: 1fr; }
+    }
+</style>

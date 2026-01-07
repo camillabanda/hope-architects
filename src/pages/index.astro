@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+	<!-- HERO -->
+	<section class="hero">
+		<div class="overlay-grid"></div>
+		<div class="container hero-content">
+			<h1>We Don’t Wait for Change.<br><span class="text-orange">We Design It.</span></h1>
+			<p class="sub-headline">A leadership academy for Zambia’s boldest young innovators.</p>
+			
+			<div class="cta-group">
+				<a href="/apply" class="btn btn-primary">Apply Now</a>
+				<span class="deadline">Deadline: 18th December</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- INTRO -->
+	<section class="section-padding">
+		<div class="container text-center">
+			<h2 class="text-yellow">This Is Not a Workshop.<br>It’s a Leadership Release.</h2>
+			<div class="intro-grid">
+				<div class="intro-text">
+					<p>The Hope Architects Academy is a deep leadership and trainer-of-trainers immersion designed to equip Zambia’s young changemakers with the inner clarity, practical skills, and collaborative power needed to shape the future.</p>
+                    <p>We don't just teach theory. <strong class="text-orange">We build solutions.</strong></p>
+				</div>
+                <div class="neon-image-wrapper">
+                    <img src="/images/collaborate-neon.png" alt="Youth collaborating with neon imagination" class="neon-feature-img" />
+                </div>
+			</div>
+		</div>
+	</section>
+
+    <!-- PILLARS -->
+    <section class="section-padding bg-darker">
+        <div class="container">
+            <h2 class="text-center">Three Pillars. One Transformation.</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Identity</h3>
+                    <p>Lead from who you are. Discover core values and purpose.</p>
+                </div>
+                <div class="card">
+                    <h3>Dialogue</h3>
+                    <p>Master facilitation. Navigate conflict with confidence.</p>
+                </div>
+                <div class="card">
+                    <h3>Impact</h3>
+                    <p>From idea to action. Design real community projects.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="/programmes" class="btn btn-primary">View Programme Details</a>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+	.hero {
+		min-height: 90vh;
+		display: flex;
+		align-items: center;
+		background: url('/images/hero.png') no-repeat center center/cover;
+		position: relative;
+	}
+
+	.overlay-grid {
+		position: absolute;
+		inset: 0;
+		background: rgba(11, 22, 44, 0.85); /* Navy Overlay */
+        background-image: url('/images/blueprint-bg.png'); /* Blueprint texture */
+        background-blend-mode: overlay;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+        text-align: left;
+	}
+
+	.sub-headline {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+        max-width: 600px;
+	}
+
+    .cta-group {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .deadline {
+        font-family: var(--font-headline);
+        color: var(--color-sun-yellow);
+        letter-spacing: 1px;
+    }
+    
+    .intro-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 3rem;
+        text-align: left;
+    }
+    
+    .neon-image-wrapper {
+        position: relative;
+    }
+    
+    .neon-feature-img {
+        width: 100%;
+        border: 2px solid var(--color-neon-orange);
+        box-shadow: 10px 10px 0 var(--color-sun-yellow);
+        filter: contrast(110%);
+        transition: transform 0.3s;
+    }
+    
+    .neon-feature-img:hover {
+        transform: scale(1.02);
+    }
+    
+    .bg-darker {
+        background: rgba(0,0,0,0.2);
+    }
+    
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .card {
+        border: 2px solid var(--color-blueprint-line);
+        padding: 2rem;
+        background: rgba(255,255,255,0.02);
+        transition: 0.3s;
+    }
+    
+    .card:hover {
+        border-color: var(--color-neon-orange);
+        background: rgba(255,77,0, 0.1);
+    }
+</style>
